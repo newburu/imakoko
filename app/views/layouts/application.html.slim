@@ -5,7 +5,11 @@ html
       | Imakoko
     = csrf_meta_tags
     = csp_meta_tag
-    = stylesheet_link_tag
+    = stylesheet_link_tag "application", "data-turbo-track": "reload"
     = javascript_importmap_tags
   body
-    = yield
+    = render template:'layouts/header'
+    main
+      .container
+        = yield
+    = render template:'layouts/footer'
