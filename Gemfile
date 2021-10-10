@@ -71,3 +71,7 @@ end
 # Slim
 gem 'slim-rails'
 gem 'html2slim'
+
+# 検索
+gem 'ransack', github: 'activerecord-hackery/ransack'
+gem 'kaminari'

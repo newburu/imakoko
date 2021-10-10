@@ -3,7 +3,8 @@ class LocationsController < ApplicationController
 
   # GET /locations or /locations.json
   def index
-    @locations = Location.all
+    @q = Location.ransack(params[:q])
+    @locations = @q.result.includes(:user).page(params[:page])
   end
 
   # GET /locations/1 or /locations/1.json

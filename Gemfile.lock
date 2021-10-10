@@ -1,3 +1,12 @@
+GIT
+  remote: https://github.com/activerecord-hackery/ransack.git
+  revision: 4caf7c25b07e6c7271b02e46dc3a7985cca61162
+  specs:
+    ransack (2.4.2)
+      activerecord (>= 5.2.4)
+      activesupport (>= 5.2.4)
+      i18n
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -96,6 +105,18 @@ GEM
       reline (>= 0.2.7)
     jbuilder (2.11.2)
       activesupport (>= 5.0.0)
+    kaminari (1.2.1)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.2.1)
+      kaminari-activerecord (= 1.2.1)
+      kaminari-core (= 1.2.1)
+    kaminari-actionview (1.2.1)
+      actionview
+      kaminari-core (= 1.2.1)
+    kaminari-activerecord (1.2.1)
+      activerecord
+      kaminari-core (= 1.2.1)
+    kaminari-core (1.2.1)
     loofah (2.12.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -202,9 +223,11 @@ DEPENDENCIES
   html2slim
   importmap-rails (>= 0.3.4)
   jbuilder (~> 2.7)
+  kaminari
   mysql2 (~> 0.5)
   puma (~> 5.0)
   rails (~> 7.0.0.alpha2)
+  ransack!
   selenium-webdriver
   slim-rails
   stimulus-rails (>= 0.4.0)
