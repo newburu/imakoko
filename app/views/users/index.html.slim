@@ -1,10 +1,11 @@
-h1 Listing users
+h1
+  = t('.title')
 
 table
   thead
     tr
-      th Code
-      th Name
+      th = User.human_attribute_name :code
+      th = User.human_attribute_name :name
       th
       th
       th

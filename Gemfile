@@ -75,3 +75,6 @@ gem 'html2slim'
 # 検索
 gem 'ransack', github: 'activerecord-hackery/ransack'
 gem 'kaminari'
+
+# 多言語化
+gem 'rails-i18n'
