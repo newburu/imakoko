@@ -1,11 +1,14 @@
+h1
+  = t('.title', user_name: @user.name)
+
 p#notice = notice
 
 p
-  strong Code:
+  strong = "#{User.human_attribute_name :code}:"
   = @user.code
 
 p
-  strong Name:
+  strong = "#{User.human_attribute_name :name}:"
   = @user.name
 
 => link_to 'Edit', edit_user_path(@user)
