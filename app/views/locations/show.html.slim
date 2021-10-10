@@ -1,0 +1,21 @@
+p#notice = notice
+
+p
+  strong User:
+  = @location.user.name
+
+p
+  strong Latitude:
+  = @location.latitude
+
+p
+  strong Longitude:
+  = @location.longitude
+
+p
+  strong Created_at
+  = @location.created_at
+
+=> link_to 'Edit', edit_location_path(@location)
+'|
+=< link_to 'Back', locations_path
