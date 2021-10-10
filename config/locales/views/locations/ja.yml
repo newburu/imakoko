@@ -1,0 +1,10 @@
+ja:
+  locations:
+    index:
+      title: '現在地一覧'
+    new:
+      title: '現在地登録'
+    show:
+      title: '現在地情報'
+    edit:
+      title: '現在地情報を編集'

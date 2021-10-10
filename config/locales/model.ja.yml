@@ -11,6 +11,12 @@ ja:
           code: コード
           # view側： User.human_attribute_name :name => "名前" /　t("activerecord.attributes.user.name")と同じ
           name: 名前
+        location:
+          id: ID
+          user: ユーザ
+          latitude: 緯度
+          longitude: 経度
+          create_at: 登録日
   # 全てのmodelで共通して使用するattributesを定義
   attributes:
     created_at: 作成日
