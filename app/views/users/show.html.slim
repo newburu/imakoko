@@ -11,6 +11,22 @@ p
   strong = "#{User.human_attribute_name :name}:"
   = @user.name
 
+p
+  strong = "現在位置:"
+  = "#{Location.human_attribute_name :latitude}:#{@user.last_location.latitude}, #{Location.human_attribute_name :longitude}:#{@user.last_location.longitude}"
+
+#map style="height: 400px;"
+
 => link_to 'Edit', edit_user_path(@user)
 '|
 =< link_to 'Back', users_path
+
+javascript:
+  function initMap() {
+      let map = new google.maps.Map(document.getElementById('map'), {
+          center: { lat: #{@user.last_location.latitude}, lng: #{@user.last_location.longitude} },
+          zoom: 18
+      });
+  }
+
+script{ async defer src="https://maps.googleapis.com/maps/api/js?key=#{ENV['GOOGLE_API_KEY']}&callback=initMap" }
