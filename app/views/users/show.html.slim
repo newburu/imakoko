@@ -27,6 +27,12 @@ javascript:
           center: { lat: #{@user.last_location.latitude}, lng: #{@user.last_location.longitude} },
           zoom: 18
       });
+      let myLatlng = new google.maps.LatLng(#{@user.last_location.latitude}, #{@user.last_location.longitude});
+      let marker = new google.maps.Marker({
+        position: myLatlng,
+        map: map,
+        title: '#{@user.name}'
+    });   
   }
 
 script{ async defer src="https://maps.googleapis.com/maps/api/js?key=#{ENV['GOOGLE_API_KEY']}&callback=initMap" }
