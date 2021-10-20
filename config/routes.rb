@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   namespace 'api' do
     namespace 'v1' do
+      # 現在地を登録
+      get 'users/regist_location'
       # 現在地を取得
       get 'users/last_location'
     end
