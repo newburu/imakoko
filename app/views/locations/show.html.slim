@@ -1,0 +1,24 @@
+h1
+  = t('.title')
+
+p#notice = notice
+
+p
+  strong = "#{Location.human_attribute_name :user}:"
+  = @location.user.name
+
+p
+  strong = "#{Location.human_attribute_name :latitude}:"
+  = @location.latitude
+
+p
+  strong = "#{Location.human_attribute_name :longitude}:"
+  = @location.longitude
+
+p
+  strong = "#{Location.human_attribute_name :created_at}:"
+  = @location.created_at
+
+=> link_to 'Edit', edit_location_path(@location)
+'|
+=< link_to 'Back', locations_path

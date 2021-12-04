@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title
+      | Imakoko
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag "application", "data-turbo-track": "reload"
+    = javascript_importmap_tags
+  body
+    = render template:'layouts/header'
+    main
+      .container
+        = yield
+    = render template:'layouts/footer'

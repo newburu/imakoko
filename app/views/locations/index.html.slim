@@ -1,0 +1,43 @@
+h1
+  = t('.title')
+
+= search_form_for @q do |f|
+  .row
+    .col
+      = f.label :user_code_cont
+      = f.search_field :user_code_cont
+  .row
+    .col
+      = f.label :user_name_cont
+      = f.search_field :user_name_cont
+  = f.submit '検索'
+
+= paginate @locations
+
+table
+  thead
+    tr
+      th = Location.human_attribute_name :user
+      th = Location.human_attribute_name :latitude
+      th = Location.human_attribute_name :longitude
+      th = Location.human_attribute_name :create_at
+      th
+      th
+      th
+
+  tbody
+    - @locations.each do |location|
+      tr
+        td = location.user.name
+        td = location.latitude
+        td = location.longitude
+        td = location.created_at
+        td = link_to 'Show', location
+        td = link_to 'Edit', edit_location_path(location)
+        td = link_to 'Destroy', location, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= paginate @locations
+
+= link_to 'New Location', new_location_path
