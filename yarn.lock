@@ -47,11 +47,6 @@ braces@~3.0.2:
   optionalDependencies:
     fsevents "~2.3.2"
 
-data-confirm-modal@^1.6.2:
-  version "1.6.2"
-  resolved "https://registry.npmjs.org/data-confirm-modal/-/data-confirm-modal-1.6.2.tgz"
-  integrity sha512-UYYgx8hS65X8Y336YRp1x6A5Gfkhh4iYkLq5jw7oS++hTcq/3yO8JOrbfHvvr7qqqQxBSPRyvUXnFEFIr4ja4w==
-
 fill-range@^7.0.1:
   version "7.0.1"
   resolved "https://registry.npmjs.org/fill-range/-/fill-range-7.0.1.tgz"

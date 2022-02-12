@@ -78,7 +78,3 @@ gem 'kaminari'
 
 # 多言語化
 gem 'rails-i18n'
-
-# data-confirm装飾
-gem 'data-confirm-modal'
-gem "jquery-rails"
