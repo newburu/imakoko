@@ -84,3 +84,6 @@ gem 'kaminari'
 
 # 多言語化
 gem 'rails-i18n'
+
+# 初期データ
+gem 'seed-fu'
