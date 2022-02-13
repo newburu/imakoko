@@ -15,3 +15,6 @@ header
           = link_to("FAQs", "#", {class: "nav-link"})
         li.nav-item
           = link_to("About", "#", {class: "nav-link"})
+        - if current_user
+          li.nav-item
+            = link_to("SignOut", destroy_user_session_path, {class: "nav-link"})

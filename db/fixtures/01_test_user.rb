@@ -2,6 +2,8 @@ user = User.seed do |s|
   s.id = 1
   s.code = 'newburu'
   s.name = 'にゅ〜ぶる'
+  s.email = 'newburu@gmail.com'
+  s.password = 'newburu'
 end
 Location.seed do |l|
   l.id = 1
